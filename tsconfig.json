@@ -1,0 +1,17 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "allowJs": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "lib/process/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+}

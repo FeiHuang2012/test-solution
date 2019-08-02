@@ -1,0 +1,48 @@
+[ {
+  "transform" : { },
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "id" : "cn.gezhitech.test.plt1250.TestAbstractAsset",
+  "$version" : "0",
+  "title" : "TestAbstractAssetSchema",
+  "type" : "object",
+  "ensuredIndexes" : [ ],
+  "required" : [ "parent" ],
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "parent" : {
+      "type" : "string"
+    }
+  },
+  "foreignkeyProperties" : { }
+}, {
+  "transform" : {
+    "operations" : [ {
+      "toType" : "string",
+      "operation" : "add-field",
+      "defaultValue" : "dsf",
+      "toField" : "newField"
+    } ]
+  },
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "ensuredDropedIndexes" : [ ],
+  "id" : "cn.gezhitech.test.plt1250.TestAbstractAsset",
+  "$version" : "1",
+  "title" : "TestAbstractAssetSchema",
+  "type" : "object",
+  "ensuredIndexes" : [ ],
+  "required" : [ "parent", "newField" ],
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "parent" : {
+      "type" : "string"
+    },
+    "newField" : {
+      "type" : "string"
+    }
+  },
+  "foreignkeyProperties" : { }
+} ]

@@ -1,0 +1,20 @@
+[ {
+  "transform" : { },
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "ensuredFullTextIndexes" : [ ],
+  "id" : "cn.gezhitech.test.plt1250.TestAbstractAsset",
+  "$version" : "0",
+  "title" : "TestAbstractAssetSchema",
+  "type" : "object",
+  "ensuredIndexes" : [ ],
+  "required" : [ "parent" ],
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "parent" : {
+      "type" : "string"
+    }
+  },
+  "foreignkeyProperties" : { }
+} ]

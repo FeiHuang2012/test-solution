@@ -1,0 +1,104 @@
+[ {
+  "registry" : "cn.gezhitech.test.plt1295.TestFullTextAsset",
+  "transform" : { },
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "ensuredFullTextIndexes" : [ {
+    "searchmode" : true,
+    "language" : "chinese",
+    "key" : "firstName"
+  }, {
+    "searchmode" : true,
+    "language" : "chinese",
+    "key" : "lastName"
+  } ],
+  "id" : "cn.gezhitech.test.plt1295.TestFullTextAsset",
+  "$version" : "0",
+  "title" : "TestFullTextAssetSchema",
+  "type" : "object",
+  "ensuredIndexes" : [ {
+    "dropDups" : false,
+    "sparse" : true,
+    "key" : "id",
+    "background" : true,
+    "unique" : false
+  }, {
+    "dropDups" : false,
+    "sparse" : true,
+    "key" : "id",
+    "background" : true,
+    "unique" : false
+  } ],
+  "required" : [ "id", "firstName", "lastName", "year" ],
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "firstName" : {
+      "type" : "string"
+    },
+    "lastName" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string",
+      "unique" : true
+    },
+    "year" : {
+      "type" : "integer"
+    }
+  },
+  "foreignkeyProperties" : { }
+}, {
+  "registry" : "cn.gezhitech.test.plt1295.TestFullTextAsset",
+  "ensuredDropFullTextIndexes" : false,
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "$version" : "1",
+  "title" : "TestFullTextAssetSchema",
+  "type" : "object",
+  "ensuredIndexes" : [ ],
+  "required" : [ "id", "firstName", "lastName", "year" ],
+  "foreignkeyProperties" : { },
+  "transform" : {
+    "operations" : [ {
+      "toType" : "string",
+      "operation" : "add-field",
+      "toField" : "test"
+    } ]
+  },
+  "ensuredDropedIndexes" : [ ],
+  "ensuredFullTextIndexes" : [ {
+    "searchmode" : true,
+    "language" : "chinese",
+    "key" : "firstName"
+  }, {
+    "searchmode" : true,
+    "language" : "chinese",
+    "key" : "lastName"
+  }, {
+    "searchmode" : true,
+    "language" : "chinese",
+    "key" : "test"
+  } ],
+  "id" : "cn.gezhitech.test.plt1295.TestFullTextAsset",
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "firstName" : {
+      "type" : "string"
+    },
+    "lastName" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string",
+      "unique" : true
+    },
+    "test" : {
+      "type" : "string"
+    },
+    "year" : {
+      "type" : "integer"
+    }
+  }
+} ]

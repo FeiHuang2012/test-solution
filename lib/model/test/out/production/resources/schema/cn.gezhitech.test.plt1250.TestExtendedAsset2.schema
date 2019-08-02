@@ -1,0 +1,76 @@
+[ {
+  "registry" : "cn.gezhitech.test.plt1250.TestExtendedAsset",
+  "transform" : { },
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "id" : "cn.gezhitech.test.plt1250.TestExtendedAsset2",
+  "$version" : "0",
+  "title" : "TestExtendedAsset2Schema",
+  "type" : "object",
+  "ensuredIndexes" : [ {
+    "dropDups" : false,
+    "sparse" : true,
+    "key" : "id",
+    "background" : true,
+    "unique" : false
+  } ],
+  "required" : [ "child2", "id", "child", "parent" ],
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "parent" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string",
+      "unique" : true
+    },
+    "child2" : {
+      "type" : "string"
+    },
+    "child" : {
+      "type" : "string"
+    }
+  },
+  "foreignkeyProperties" : { }
+}, {
+  "registry" : "cn.gezhitech.test.plt1250.TestExtendedAsset",
+  "transform" : {
+    "operations" : [ {
+      "toType" : "string",
+      "operation" : "add-field",
+      "defaultValue" : "dsf",
+      "toField" : "newField"
+    } ]
+  },
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "ensuredDropedIndexes" : [ ],
+  "id" : "cn.gezhitech.test.plt1250.TestExtendedAsset2",
+  "$version" : "1",
+  "title" : "TestExtendedAsset2Schema",
+  "type" : "object",
+  "ensuredIndexes" : [ ],
+  "required" : [ "child2", "id", "child", "parent", "newField" ],
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "parent" : {
+      "type" : "string"
+    },
+    "newField" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string",
+      "unique" : true
+    },
+    "child2" : {
+      "type" : "string"
+    },
+    "child" : {
+      "type" : "string"
+    }
+  },
+  "foreignkeyProperties" : { }
+} ]

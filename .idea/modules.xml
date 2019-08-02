@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.example.com.test-solution.test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.example.com.test-solution.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-solution.iml" filepath="$PROJECT_DIR$/test-solution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-solution.main.iml" filepath="$PROJECT_DIR$/.idea/modules/test-solution.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/model/test/test-solution.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/model/test/test-solution.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/model/test/test-solution.test.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/model/test/test-solution.test.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/model/test/test-solution.test.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/model/test/test-solution.test.test.iml" />
+    </modules>
+  </component>
+</project>

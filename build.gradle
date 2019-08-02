@@ -1,0 +1,77 @@
+import groovy.json.JsonSlurper
+
+def packageSlurper = new JsonSlurper()
+def packageJson = packageSlurper.parse file('package.json')
+group = packageJson.group
+if (project.hasProperty('newVersion')) {
+    version = newVersion
+    println "Use version ${version} in Environment Variable"
+} else {
+    version = packageJson.version
+    println "Use version ${version} in package.json"
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    group = rootProject.group
+    version = rootProject.version
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+
+    repositories {
+        maven {
+            url "${mvnUrl}"
+        }
+
+        maven {
+            url "${nexusUrl}/repository/maven-public/"
+            credentials {
+                username nexusUsername
+                password nexusPassword
+            }
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+    }
+
+    dependencies {
+        compile 'org.slf4j:slf4j-api:1.7.25'
+        compile "cn.gezhitech:tide-msc-java-sdk-api:${tidemscVersion}"
+        testCompile 'org.testng:testng:6.8.1'
+        testCompile 'org.skyscreamer:jsonassert:1.5.0'
+        testCompile "cn.gezhitech:tide-msc-test:${tidemscVersion}"
+        testRuntime "org.slf4j:slf4j-simple:1.7.25"
+    }
+
+    test {
+        useTestNG()
+    }
+
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "${mvnUrl}"
+        }
+        maven {
+            url "${nexusUrl}/repository/maven-public/"
+            credentials {
+                username nexusUsername
+                password nexusPassword
+            }
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+    }
+    dependencies {
+        classpath "cn.gezhitech:tide-msc-gradle-plugin:${tidemscVersion}"
+    }
+}
+
+apply plugin: 'cn.gezhitech.tidemsc-gradle-plugin'

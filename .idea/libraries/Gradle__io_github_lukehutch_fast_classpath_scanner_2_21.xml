@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.lukehutch:fast-classpath-scanner:2.21">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.lukehutch/fast-classpath-scanner/2.21/cc8e22b412521480c89ac79194e82bd4471dd75/fast-classpath-scanner-2.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.lukehutch/fast-classpath-scanner/2.21/cf12c9819f520de296507af9036f9f84bbd1d0dd/fast-classpath-scanner-2.21-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

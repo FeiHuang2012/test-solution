@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jparsec:jparsec:3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jparsec/jparsec/3.0/d58e152623bb664f4c8e6d7ce8db7fa7fda2f7d5/jparsec-3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jparsec/jparsec/3.0/58f1043c4808436dd5a08bd3607d3685ca588b48/jparsec-3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

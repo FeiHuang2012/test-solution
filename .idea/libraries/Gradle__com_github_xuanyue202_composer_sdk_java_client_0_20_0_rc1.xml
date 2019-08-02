@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.xuanyue202:composer-sdk-java-client:0.20.0-rc1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.xuanyue202/composer-sdk-java-client/0.20.0-rc1/44b4ad3e07815649b226cf43db5fa71c0cac2c0e/composer-sdk-java-client-0.20.0-rc1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.xuanyue202/composer-sdk-java-client/0.20.0-rc1/2e3b0b4edd8d082318cfc54f9ae94d52b969b8b2/composer-sdk-java-client-0.20.0-rc1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
