@@ -11,7 +11,7 @@ package cn.gezhitech.test.plt1469;
 
 import cn.gezhitech.tidemsc.annotation.IndexHint;
 import cn.gezhitech.tidemsc.annotation.Rule;
-import cn.gezhitech.tidemsc.model.Pointer;
+import cn.gezhitech.tidemsc.annotation.Rename;
 import org.hyperledger.composer.annotation.Asset;
 import org.hyperledger.composer.annotation.DataField;
 import org.hyperledger.composer.annotation.Enum;
@@ -24,7 +24,7 @@ public class TestSchemaUpdateAsset {
     @DataField(primary = true)
     private String id;
 
-    // to remove
+    // to add previous mandatoryString which  was deleted
     @DataField
     private String firstName;
 
@@ -38,7 +38,7 @@ public class TestSchemaUpdateAsset {
     /*
     @DataField(genericType = TestSchemaAsset1.class)
     private Pointer<TestSchemaAsset1> pointer;
-     */
+    */
 
     // to transform from string to enum
     @DataField
