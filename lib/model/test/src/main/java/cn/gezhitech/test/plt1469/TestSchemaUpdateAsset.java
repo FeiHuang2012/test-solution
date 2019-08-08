@@ -35,8 +35,10 @@ public class TestSchemaUpdateAsset {
     private Integer age;
 
     // to transform
+    /*
     @DataField(genericType = TestSchemaAsset1.class)
     private Pointer<TestSchemaAsset1> pointer;
+     */
 
     // to transform from string to enum
     @DataField
