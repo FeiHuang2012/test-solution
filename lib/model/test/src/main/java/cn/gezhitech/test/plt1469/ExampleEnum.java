@@ -5,5 +5,5 @@ import org.hyperledger.composer.annotation.Enum;
 // to add value in enum
 @Enum
 public enum ExampleEnum {
-    enum1, enum2
+    enum1, enum2, enum3
 }
