@@ -10,7 +10,9 @@
 package cn.gezhitech.test.plt1469;
 
 import cn.gezhitech.tidemsc.annotation.IndexHint;
+import cn.gezhitech.tidemsc.annotation.Rename;
 import cn.gezhitech.tidemsc.annotation.Rule;
+import cn.gezhitech.tidemsc.annotation.Transform;
 import cn.gezhitech.tidemsc.model.Pointer;
 import org.hyperledger.composer.annotation.Asset;
 import org.hyperledger.composer.annotation.DataField;
@@ -24,27 +26,29 @@ public class TestSchemaUpdateAsset {
     @DataField(primary = true)
     private String id;
 
-    // to remove
-    @DataField
-    private String firstname;
-
     // to add mandatoryString: lastname
+    @DataField
+    private String lastName;
 
     // to rename
+    @Rename(from = "age")
     @DataField
-    private Integer age;
+    private Integer myAge;
 
     // to transform
-    @DataField(genericType = TestSchemaAsset1.class)
-    private Pointer<TestSchemaAsset1> pointer;
+    @Transform(expression = "function(input) { return input.pointer.replace('TestSchemaAsset1', 'TestSchemaAsset2')}")
+    @DataField(genericType = TestSchemaAsset2.class)
+    private Pointer<TestSchemaAsset2> pointer;
 
     // to transform from string to enum
-    @DataField
-    private String shouldBeEnum;
+    @Enum
+    public enum shouldBeEnum{
+        const1, const2, const3
+    }
 
     // to add value in enum
     @Enum
     public enum ExampleEnum{
-        enum1, enum2
+        enum1, enum2, enum3
     }
 }
