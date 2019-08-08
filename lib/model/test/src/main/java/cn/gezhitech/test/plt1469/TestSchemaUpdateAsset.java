@@ -26,29 +26,30 @@ public class TestSchemaUpdateAsset {
     @DataField(primary = true)
     private String id;
 
+    // to add previous mandatoryString which was deleted
+    @DataField(defaultValue = "hello")
+    private String firstName;
+
     // to add mandatoryString: lastname
     @DataField(defaultValue = "li")
     private String lastName;
 
     // to rename
-    @Rename(from = "age")
+    @Rename(from = "myAge")
     @DataField
-    private Integer myAge;
+    private Integer age;
+
+    @DataField
+    private ShouldBeEnum shouldBeEnum;
+
+    @DataField
+    private ExampleEnum addEnum;
 
     // to transform
+    /*
     @Transform(expression = "function(input) { return input.pointer.replace('TestSchemaAsset1', 'TestSchemaAsset2')}")
     @DataField(genericType = TestSchemaAsset2.class)
     private Pointer<TestSchemaAsset2> pointer;
+    */
 
-    // to transform from string to enum
-    @Enum
-    public enum shouldBeEnum{
-        const1, const2, const3
-    }
-
-    // to add value in enum
-    @Enum
-    public enum ExampleEnum{
-        enum1, enum2, enum3
-    }
 }
