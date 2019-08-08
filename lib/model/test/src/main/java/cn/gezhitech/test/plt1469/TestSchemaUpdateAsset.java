@@ -25,17 +25,17 @@ public class TestSchemaUpdateAsset {
     private String id;
 
     // to add previous mandatoryString which  was deleted
-    //@DataField
-    //private String firstName;
+    @DataField(defaultValue = "hello")
+    private String firstName;
 
     // to add mandatoryString: lastname
-    @DataField(defaultValue = "huang")
-    private String lastName;
+    //@DataField(defaultValue = "huang")
+    //private String lastName;
 
     // to rename
-    @Rename(from = "age")
+    @Rename(from = "myAge")
     @DataField
-    private Integer myAge;
+    private Integer age;
 
     // to transform
     /*
@@ -45,7 +45,7 @@ public class TestSchemaUpdateAsset {
 
     // to transform from string to enum
     @DataField
-    private ShouldBeEnum shouldBeEnum;
+    private String shouldBeEnum;
 
     @DataField
     private ExampleEnum addEnum;

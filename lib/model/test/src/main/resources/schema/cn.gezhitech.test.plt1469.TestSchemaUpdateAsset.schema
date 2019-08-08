@@ -163,4 +163,64 @@
       "enum" : [ "const1", "const2", "const3" ]
     }
   }
+}, {
+  "registry" : "cn.gezhitech.test.plt1469.TestSchemaUpdateAsset",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "$version" : "7",
+  "title" : "TestSchemaUpdateAssetSchema",
+  "type" : "object",
+  "ensuredIndexes" : [ {
+    "dropDups" : false,
+    "sparse" : true,
+    "key" : "id",
+    "background" : true,
+    "unique" : false
+  }, {
+    "dropDups" : false,
+    "sparse" : true,
+    "key" : "id",
+    "background" : true,
+    "unique" : false
+  } ],
+  "required" : [ "id", "firstName", "age", "shouldBeEnum", "addEnum" ],
+  "foreignkeyProperties" : { },
+  "transform" : {
+    "operations" : [ {
+      "toType" : "string",
+      "operation" : "add-field",
+      "defaultValue" : "hello",
+      "toField" : "firstName"
+    }, {
+      "fromField" : "myAge",
+      "operation" : "rename-field",
+      "toField" : "age"
+    }, {
+      "operation" : "delete-field",
+      "fromField" : "lastName"
+    } ]
+  },
+  "ensuredDropedIndexes" : [ ],
+  "ensuredFullTextIndexes" : [ ],
+  "id" : "cn.gezhitech.test.plt1469.TestSchemaUpdateAsset",
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "firstName" : {
+      "type" : "string"
+    },
+    "addEnum" : {
+      "enum" : [ "enum1", "enum2", "enum3" ]
+    },
+    "id" : {
+      "type" : "string",
+      "unique" : true
+    },
+    "shouldBeEnum" : {
+      "type" : "string"
+    },
+    "age" : {
+      "type" : "integer"
+    }
+  }
 } ]
