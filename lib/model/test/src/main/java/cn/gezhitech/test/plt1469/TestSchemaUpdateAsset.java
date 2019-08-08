@@ -26,7 +26,7 @@ public class TestSchemaUpdateAsset {
 
     // to remove
     @DataField
-    private String firstname;
+    private String firstName;
 
     // to add mandatoryString: lastname
 
@@ -42,9 +42,6 @@ public class TestSchemaUpdateAsset {
     @DataField
     private String shouldBeEnum;
 
-    // to add value in enum
-    @Enum
-    public enum ExampleEnum{
-        enum1, enum2
-    }
+    @DataField
+    private ExampleEnum addEnum;
 }
