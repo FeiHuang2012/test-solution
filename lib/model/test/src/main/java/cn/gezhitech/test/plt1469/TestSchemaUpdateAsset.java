@@ -36,19 +36,16 @@ public class TestSchemaUpdateAsset {
     private Integer myAge;
 
     // to transform
+    /*
     @Transform(expression = "function(input) { return input.pointer.replace('TestSchemaAsset1', 'TestSchemaAsset2')}")
     @DataField(genericType = TestSchemaAsset2.class)
     private Pointer<TestSchemaAsset2> pointer;
+     */
 
-    // to transform from string to enum
-    @Enum
-    public enum shouldBeEnum{
-        const1, const2, const3
-    }
+    @DataField
+    private ShouldBeEnum shouldBeEnum;
 
-    // to add value in enum
-    @Enum
-    public enum ExampleEnum{
-        enum1, enum2, enum3
-    }
+    @DataField
+    private ExampleEnum addEnum;
+
 }
