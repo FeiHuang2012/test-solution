@@ -24,14 +24,18 @@ public class TestSchemaUpdateAsset {
     @DataField(primary = true)
     private String id;
 
+    // to add previous mandatoryString which  was deleted
+    @DataField(defaultValue = "hello")
+    private String firstName;
+
     // to add mandatoryString: lastname
     @DataField(defaultValue = "li")
     private String lastName;
 
     // to rename
-    @Rename(from = "age")
+    @Rename(from = "myAge")
     @DataField
-    private Integer myAge;
+    private Integer age;
 
     // to transform
     /*
