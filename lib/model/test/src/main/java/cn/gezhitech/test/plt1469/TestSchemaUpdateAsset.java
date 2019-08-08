@@ -27,7 +27,7 @@ public class TestSchemaUpdateAsset {
     private String id;
 
     // to add mandatoryString: lastname
-    @DataField
+    @DataField(defaultValue = "li")
     private String lastName;
 
     // to rename
