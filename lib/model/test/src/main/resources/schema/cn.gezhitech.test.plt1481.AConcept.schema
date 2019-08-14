@@ -1,0 +1,84 @@
+[ {
+  "transform" : { },
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "ensuredFullTextIndexes" : [ ],
+  "id" : "cn.gezhitech.test.plt1481.AConcept",
+  "$version" : "8",
+  "title" : "AConceptSchema",
+  "type" : "object",
+  "ensuredIndexes" : [ ],
+  "required" : [ "stringType", "longType", "embeddedField", "pointerType" ],
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "embeddedField" : {
+      "type" : "cn.gezhitech.tidemsc.model.User"
+    },
+    "pointerType" : {
+      "type" : "string"
+    },
+    "longType" : {
+      "type" : "integer"
+    },
+    "stringType" : {
+      "type" : "string"
+    }
+  },
+  "foreignkeyProperties" : {
+    "pointerType" : [ {
+      "checkExist" : false,
+      "field" : "id",
+      "parser" : "^resource:cn.gezhitech.tidemsc.model.User#(.*)$"
+    } ]
+  }
+}, {
+  "transform" : {
+    "operations" : [ {
+      "toType" : "string",
+      "operation" : "add-field",
+      "toField" : "optionalField"
+    } ]
+  },
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "ensuredDropedIndexes" : [ ],
+  "ensuredFullTextIndexes" : [ ],
+  "id" : "cn.gezhitech.test.plt1481.AConcept",
+  "$version" : "9",
+  "title" : "AConceptSchema",
+  "type" : "object",
+  "ensuredIndexes" : [ ],
+  "required" : [ "stringType", "longType", "pointerType", "embeddedField" ],
+  "properties" : {
+    "$class" : {
+      "type" : "string"
+    },
+    "embeddedField" : {
+      "type" : "cn.gezhitech.tidemsc.model.User"
+    },
+    "optionalField" : {
+      "type" : "string"
+    },
+    "pointerType" : {
+      "type" : "string"
+    },
+    "longType" : {
+      "type" : "integer"
+    },
+    "stringType" : {
+      "type" : "string"
+    }
+  },
+  "foreignkeyProperties" : {
+    "pointerType" : [ {
+      "checkExist" : false,
+      "field" : "id",
+      "parser" : "^resource:cn.gezhitech.tidemsc.model.User#(.*)$"
+    } ],
+    "optionalField" : [ {
+      "checkExist" : false,
+      "field" : "id",
+      "parser" : "^resource:cn.gezhitech.tidemsc.model.User#(.*)$"
+    } ]
+  }
+} ]
